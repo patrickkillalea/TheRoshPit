@@ -108,9 +108,9 @@ module.exports = function(Articles) {
 
             Articles.events.publish({
                 action: 'viewed',
-                user: {
-                    name: req.user.name
-                },
+                // user: {
+                //     name: req.user.name
+                // },
                 name: req.article.title,
                 url: config.hostname + '/articles/' + req.article._id
             });

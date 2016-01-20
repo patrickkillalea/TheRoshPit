@@ -1,7 +1,23 @@
 {% for file in aggregatedassets.footer.js %}
   <script type="text/javascript" src="{{file}}"></script>
+<!--   <footer class="footer">
+  <div class="container">
+      <p>Patrick Killalea |
+        <a href="https://twitter.com/">@PKillalea</a> |
+         <a href="">Issues</a></p>
+  </div>
+</footer> -->
+
 {% endfor %}
 
 {% if (process.env.NODE_ENV == 'development') %}
   <script type="text/javascript" src="{{'//' + req.hostname + ':35729/livereload.js'}}"></script>
+<!--   <footer class="footer">
+  <div class="container">
+      <p>Patrick Killalea |
+        <a href="https://twitter.com/">@PKillalea</a> |
+         <a href="">Issues</a></p>
+  </div>
+</footer> -->
+
 {% endif %}

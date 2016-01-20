@@ -269,3 +269,6 @@ footer p {
   background-image: linear-gradient(to bottom, #005200 0%, #2E782E 100%);
 }
 
+.welcome.container-fluid{
+  background-color: #081f2c;
+}

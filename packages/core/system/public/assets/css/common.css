@@ -28,7 +28,7 @@
     width: 100%
 }
 footer {
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     bottom: 0;
     height: 30px;
@@ -198,7 +198,7 @@ footer p {
     background-image: linear-gradient(to bottom, #070808 0%, #202222 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff202222', endColorstr='#ff070808', GradientType=0);
-    min-height: 200px;
+    min-height: 100px;
   }
 
 .backgroundcolor{
@@ -242,7 +242,8 @@ footer p {
 
 
 .featuredpic{
-  height:300px;
+  height:290px;
+  overflow: hidden;
 }
 .featuredpic img{
   max-width:100%;
@@ -279,4 +280,7 @@ p.wrap {
 }
 img.constrainimg{
   max-height:135px;
+}
+.articleText{
+  padding: 50px;
 }

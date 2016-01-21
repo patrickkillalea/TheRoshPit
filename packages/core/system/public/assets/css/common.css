@@ -247,7 +247,6 @@ footer p {
 .featuredpic img{
   max-width:100%;
   max-height:100%;
-
 }
 
 .trick {
@@ -271,4 +270,13 @@ footer p {
 
 .welcome.container-fluid{
   background-color: #081f2c;
+}
+.backgroundcontainercolor{
+  background-color: black;
+}
+p.wrap {
+    word-wrap: break-word;
+}
+img.constrainimg{
+  max-height:135px;
 }

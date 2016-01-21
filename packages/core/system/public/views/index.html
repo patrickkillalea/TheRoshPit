@@ -1,92 +1,82 @@
-      <div class ="row backgroundcolor">    
+      <div class ="backgroundcontainercolor">    
 
-  <div class="container">    
-<!-- Main News Section -->
-<div class="container-fluid container-inset">
-  <!-- Primary News Carousel -->
-  <div class="col-md-6 col-sm-12 col-xs-12 container-inset">
-    <div class="featuredpic">
-      <img src="http://hdwallpaper1920x1080.com/wp-content/uploads/2015/02/Shadow-Fiend-Dota-2-Wallpaper.jpg">
-    </div>
-    <p>A month has passed since the release of patch 6.86 and some teams have already decided on their style of play, while some are still experimenting. Starladder|i-League featured the finest teams of the moment and looking at their entire journey in Minsk, Belarus it is already possible to talk about how professionals are planning to play in this patch.</p>
-  </div>
-  <!-- End Primary News Carousel -->
+        <div class="container">    
 
-
-  <!-- Latest News -->
-  <section class="welcome container-fluid" data-ng-controller="IndexController">
-    <section data-ng-controller="ArticlesController" data-ng-init="find()">
-      <div class="col-md-6 col-sm-12 col-xs-12">
-
-        <ul class="articles navigation">
-          <li data-ng-repeat="article in articles | limitTo:8">
-            <a data-ng-href="/articles/{{article._id}}">
-              <span>{{article.title}}</span> -
-              <span>{{article.user.name}}</span>
-              <span style="float:right;">{{article.created | date:'medium'}}</span>
-            </a>
-          </li>
-        </ul>
-      </div> 
-
-    </section>
-  </section>
-</div>
-
-<!-- Article Pictures Primary -->
-<div class="col-md-12 container-fluid">
-
-  <div class="header"><h2>Other Stuff</h2></div>
-  <div class="container-fluid container-inset">
-
-    <section class="container-fluid" data-ng-controller="IndexController">
-      <section data-ng-controller="ArticlesController" data-ng-init="find()">
-
-        <div data-ng-repeat="article in articles | limitTo:4">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="featuredpic featured-sites">
-              <a data-ng-href="/articles/{{article._id}}">
-                <img src={{article.image}}>
-                <h3>{{article.title}}</h3> 
-              </a>
-              <p>{{article.content}}</p>
+          <!-- Main News Section -->
+          <div class="welcome container-fluid ">
+            <!-- Primary News Carousel -->
+            <div class="col-md-6 col-sm-12 col-xs-12 container-fluid container-inset">
+              <div class="featuredpic">
+                <img src="http://hdwallpaper1920x1080.com/wp-content/uploads/2015/02/Shadow-Fiend-Dota-2-Wallpaper.jpg">
+              </div>
+              <p>A month has passed since the release of patch 6.86 and some teams have already decided on their style of play, while some are still experimenting. Starladder|i-League featured the finest teams of the moment and looking at their entire journey in Minsk</p>
             </div>
+            <!-- End Primary News Carousel -->
+
+            <!-- Latest News -->
+            <section class="container-fluid" data-ng-controller="IndexController">
+              <section data-ng-controller="ArticlesController" data-ng-init="find()">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <ul class="articles navigation">
+                    <li data-ng-repeat="article in articles | limitTo:8">
+                      <a data-ng-href="/articles/{{article._id}}">
+                        <span>{{article.title}}</span> -
+                        <span>{{article.user.name}}</span>
+                        <span style="float:right;">{{article.created | date:'medium'}}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div> 
+              </section>
+            </section>
           </div>
-        </div>
-      </section>
-    </section>
-  </div>  
-</div>  
-<!-- End Article Pictures Primary -->
 
-<!-- Article Pictures Secondary -->
-<div class="col-md-12 container-fluid">
+          <!-- Article Pictures Primary -->
+          <div class="col-md-12 container-fluid">
 
-  <div class="header"><h2>Videos</h2></div>
-  <div class="container-fluid container-inset">
+            <div class="header"><h2>Other Stuff</h2></div>
+            <div class="container-fluid container-inset">
+                <section data-ng-controller="ArticlesController" data-ng-init="find()">
+                  <div data-ng-repeat="article in articles | limitTo:4">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="featuredpic">
+                        <a data-ng-href="/articles/{{article._id}}">
+                          <img class="constrainimg" src={{article.image}}>
+                          <h3>{{article.title}}</h3> 
+                        </a>
+                        <p class="wrap">{{article.content}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>  
+          </div>  
+          <!-- End Article Pictures Primary -->
 
-    <section class="container-fluid" data-ng-controller="IndexController">
-      <section data-ng-controller="ArticlesController" data-ng-init="find()">
+          <!-- Article Pictures Secondary -->
+          <div class="col-md-12 container-fluid">
 
-        <div data-ng-repeat="article in articles | limitTo:4">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="featuredpic featured-sites">
-              <a data-ng-href="/articles/{{article._id}}">
-                <img src={{article.image}}>
-                <h3>{{article.title}}</h3> 
-              </a>
-              <p>{{article.content}}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-  </div>  
-</div>  
+            <div class="header"><h2>Videos</h2></div>
+            <div class="container-fluid container-inset">
+                <section data-ng-controller="ArticlesController" data-ng-init="find()">
+                  <div data-ng-repeat="article in articles | limitTo:4">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="featuredpic">
+                        <a data-ng-href="/articles/{{article._id}}">
+                          <img class="constrainimg" src={{article.image}}>
+                          <h3>{{article.title}}</h3> 
+                        </a>
+                        <p class="wrap">{{article.content}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            </div>  
+          </div>  
 
-</div>  
-</section>  
-<!-- End Article Pictures Secondary -->            
+        </div>  
+      </div>  
+      <!-- End Article Pictures Secondary -->            
 
 
 <!--             <section class="welcome container-fluid" data-ng-controller="IndexController">

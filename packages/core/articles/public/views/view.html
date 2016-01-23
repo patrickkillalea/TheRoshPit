@@ -1,21 +1,23 @@
 <div class="container-inset">  
   <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-    <div align="right">
+    <div class="articleDate">
       <span>{{article.created | date:'medium'}}</span> /
       <span>{{article.user.name}}</span>
     </div>
-    <div align="center"><h2>{{article.title}}</h2></div>
-    <div data-ng-if="hasAuthorization(article)">
-      <a class="btn" href="/articles/{{article._id}}/edit">
-        <i class="glyphicon glyphicon-edit"></i>
-      </a>
-      <a class="btn" data-ng-click="remove(article);">
-        <i class="glyphicon glyphicon-trash"></i>
-      </a>
-    </div>
-    <div align="center">
-      <img class="featuredpic" src="{{article.image}}">
-    </div>
-    <div class="articleText">{{article.content}}</div>
-  </section>
+  </br>
+  <div align="center"><h2>{{article.title}}</h2></div>
+  <div data-ng-if="hasAuthorization(article)">
+    <a class="btn" href="/articles/{{article._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(article);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div align="center">
+    <img class="featuredpic" src="{{article.image}}">
+  </div>
+  <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
+  <pre class="articleText">{{article.content}}</pre>
+</section>
 </div> 

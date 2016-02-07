@@ -1,4 +1,21 @@
-<div class ="backgroundcontainercolor">    
+<style>
+/*Article Image Style*/
+#image-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+#image-aspect {
+    margin-top: 60%; /* 4:3 aspect ratio */
+}
+#element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+</style>
 
   <div class="container">    
 
@@ -32,18 +49,30 @@
     </div>
 
     <!-- Article Pictures Primary -->
-    <div class="col-md-12 container-fluid">
+    <div class="container-fluid">
 
-      <div class="header"><h2>Other Stuff</h2></div>
-      <div class="container-fluid container-inset">
+      <div class="header"><h2>Headlines</h2></div>
+
+      <!-- Entire Article Block -->
+      <div class="container-inset">
         <section data-ng-controller="ArticlesController" data-ng-init="find()">
           <div data-ng-repeat="article in articles | limitTo:4">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="featuredpic">
+            <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
+              <div class="">
                 <a data-ng-href="/articles/{{article._id}}">
-                  <img class="constrainimg" src={{article.image}}>
+
+                  <!-- Image Container -->
+                  <div id="image-container">
+                    <div id="image-aspect"></div>
+                    <div id="element">
+                      <img src={{article.image}} style="width:100%; height:100%; border-radius:10px;">
+                    </div>
+                  </div>
+                  
+                  <!-- Article Title -->
                   <h3>{{article.title}}</h3> 
                 </a>
+                <!-- Article Content -->
                 <p class="wrap">{{article.content}}</p>
               </div>
             </div>
@@ -53,19 +82,32 @@
     </div>  
     <!-- End Article Pictures Primary -->
 
+
     <!-- Article Pictures Secondary -->
-    <div class="col-md-12 container-fluid">
+    <div class="container-fluid">
 
       <div class="header"><h2>Videos</h2></div>
-      <div class="container-fluid container-inset">
+      
+      <!-- Entire Article Block -->
+      <div class="container-inset">
         <section data-ng-controller="ArticlesController" data-ng-init="find()">
           <div data-ng-repeat="article in articles | limitTo:4">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="featuredpic">
+            <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
+              <div class="">
                 <a data-ng-href="/articles/{{article._id}}">
-                  <img class="constrainimg" src={{article.image}}>
+
+                  <!-- Image Container -->
+                  <div id="image-container">
+                    <div id="image-aspect"></div>
+                    <div id="element">
+                      <img src={{article.image}} style="width:100%; height:100%; border-radius:10px;">
+                    </div>
+                  </div>
+                  
+                  <!-- Article Title -->
                   <h3>{{article.title}}</h3> 
                 </a>
+                <!-- Article Content -->
                 <p class="wrap">{{article.content}}</p>
               </div>
             </div>
@@ -74,6 +116,14 @@
       </div>  
     </div>  
 
+
+<!-- <div id="dummycontainer">
+    <div id="dummy"></div>
+    <div id="element">
+        some text
+    </div>
+</div> -->
+
+
   </div>  
-</div>  
 <!-- End Article Pictures Secondary -->            

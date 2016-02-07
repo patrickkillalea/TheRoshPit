@@ -15,7 +15,13 @@
     </a>
   </div>
   <div align="center">
-    <img class="featuredpic" src="{{article.image}}">
+                      <!-- Image Container -->
+                  <div id="image-article-container">
+                    <div id="image-aspect"></div>
+                    <div id="element">
+                      <img src={{article.image}} style="width:80%; height:80%; border-radius:10px;">
+                    </div>
+                  </div>
   </div>
   <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
   <pre class="articleText">{{article.content}}</pre>

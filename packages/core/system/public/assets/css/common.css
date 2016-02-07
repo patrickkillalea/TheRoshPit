@@ -43,7 +43,9 @@ footer p {
 }
 
 .featuredpic img{
-  width:510px;
+    max-width: 100%;
+    height: width\9;
+    width: auto; /* ie8 */
 }
 /*.ng-invalid.ng-dirty{*/
   /*border-color:#FA787E;*/
@@ -202,21 +204,9 @@ footer p {
     }
 
     .backgroundcolor{
-      background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/always_grey.png");
+          background: #fff url("//www.scan.co.uk/images/site/skins/NVIDIA-tombraiderski.jpg") repeat-x fixed center top;
     }
 
-    .containercolor{
-      background: rgba(30, 30, 30, 0.5);
-      padding-bottom: 50px;
-      padding-top: 50px;
-    }  
-
-    .container-inset {
-      background-color:#081f2c;
-      color:white;
-      padding-top: 15px;
-      overflow: hidden;
-    }
 
     /* NAVIGATION */
     .navigation {
@@ -242,13 +232,9 @@ footer p {
 
 
     .featuredpic{
-      height:290px;
-      overflow: hidden;
+/*      height:auto;
+      overflow: hidden;*/
       border-radius: 10px;
-    }
-    .featuredpic img{
-      max-width:100%;
-      max-height:100%;
     }
 
     .trick {
@@ -277,12 +263,24 @@ footer p {
       background-color: black;
       margin: 300 300 300px !important;
     }
+
     p.wrap {
-      word-wrap: break-word;
+/*      word-wrap: break-word;
+      
+        display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  /*max-width: 400px;*/
+  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  color: white;
+  margin: 0 auto;
+  font-size: 14px;
+  /*line-height: 1.2;*/
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
     }
-    img.constrainimg{
-      max-height:135px;
-    }
+
 
 .articleText{
     display: block;
@@ -304,4 +302,33 @@ footer p {
 .articleDate{
   float:right;
   padding-right: 10px;
+}
+
+#image-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+#image-article-container {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+}
+#image-aspect {
+    margin-top: 60%; /* aspect ratio */
+}
+#element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-inset {
+  background-color:#081f2c;
+  color:white;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
 }

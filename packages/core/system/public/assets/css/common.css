@@ -204,7 +204,8 @@ footer p {
     }
 
     .backgroundcolor{
-          background: #fff url("//www.scan.co.uk/images/site/skins/NVIDIA-tombraiderski.jpg") repeat-x fixed center top;
+          /*background: #fff url("//www.scan.co.uk/images/site/skins/NVIDIA-tombraiderski.jpg") repeat-x fixed center top;*/
+          background: #fff url("../img/roshbackground.jpg") repeat-x fixed center top;
     }
 
 

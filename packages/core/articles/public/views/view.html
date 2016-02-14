@@ -1,29 +1,35 @@
-<div class="container-inset">  
-  <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-    <div class="articleDate">
-      <span>{{article.created | date:'medium'}}</span> /
-      <span>{{article.user.name}}</span>
-    </div>
-  </br>
-  <div align="center"><h2>{{article.title}}</h2></div>
-  <div data-ng-if="hasAuthorization(article)">
-    <a class="btn" href="/articles/{{article._id}}/edit">
-      <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    <a class="btn" data-ng-click="remove(article);">
-      <i class="glyphicon glyphicon-trash"></i>
-    </a>
-  </div>
-  <div align="center">
-                      <!-- Image Container -->
-                  <div id="image-article-container">
-                    <div id="image-aspect"></div>
-                    <div id="element">
-                      <img src={{article.image}} style="width:80%; height:80%; border-radius:10px;">
-                    </div>
-                  </div>
-  </div>
-  <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
-  <pre class="articleText">{{article.content}}</pre>
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()">
+   <div class="col-md-9 col-sm-9 col-xs-12">
+      <div style="background-color:#081f2c;">
+         <div class="articleDate">
+            <span style="color:white;">{{article.created | date:'medium'}} / {{article.user.name}}</span>
+         </div>
+         <div class="visible-xs"style="color:white;"><h3>{{article.title}}</h3></div>
+         </br>
+         <div data-ng-if="hasAuthorization(article)">
+            <a class="btn" href="/articles/{{article._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <a class="btn" data-ng-click="remove(article);">
+            <i class="glyphicon glyphicon-trash"></i>
+            </a>
+         </div>
+         <div align="center">
+            <!-- Image Container -->
+            <div id="image-article-container">
+               <div id="image-aspect"></div>
+               <div id="article-element">
+                  <img src={{article.image}} class="article-image">
+               </div>
+               <div class="article-title hidden-xs">{{article.title}}</div>
+            </div>
+         </div>
+
+         <pre class="articleText">{{article.content}}</pre>
+      </div>
+   </div>
+   <div class="col-md-3 col-sm-3 hidden-xs">
+   <div style="height:600px; background-color:#081f2c"></div>
+   <div>
+   <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
 </section>
-</div> 

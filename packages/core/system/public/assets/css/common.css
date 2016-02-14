@@ -204,8 +204,8 @@ footer p {
     }
 
     .backgroundcolor{
-          /*background: #fff url("//www.scan.co.uk/images/site/skins/NVIDIA-tombraiderski.jpg") repeat-x fixed center top;*/
-          background: #fff url("../img/roshbackground.jpg") repeat-x fixed center top;
+          background: #fff url("http://theroshpit.patrickkillalea.com/system/assets/img/roshbackground.jpg") no-repeat fixed center top;
+          background-size:cover
     }
 
 
@@ -231,6 +231,9 @@ footer p {
       transform: perspective(350px) rotateX(0deg);
     }
 
+li.nav-links:hover { 
+    background-color: darkgrey;
+}
 
     .featuredpic{
 /*      height:auto;
@@ -313,11 +316,12 @@ footer p {
 #image-article-container {
     display: inline-block;
     position: relative;
-    width: 60%;
+    width: 100%;
 }
 #image-aspect {
     margin-top: 60%; /* aspect ratio */
 }
+
 #element {
     position: absolute;
     top: 0;
@@ -326,10 +330,46 @@ footer p {
     right: 0;
 }
 
+#article-element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:20px;
+}
+
 .container-inset {
   background-color:#081f2c;
   color:white;
   padding-top: 10px;
   padding-bottom: 20px;
   overflow: hidden;
+}
+
+.article-image{
+width:100%;height:100%;border-radius:20px;border-width: 2px;border-color: white;border-style:groove;
+
+}
+
+.article-nav{
+  color:black;
+  padding-left: 5px;
+}
+
+.welcome.container-fluid {
+    background-color: #081f2c !important;
+}
+
+.article-title{
+  background-color:black;
+                  color:white;
+                  font-size:30px;
+                  padding:10px;
+                  padding-right:30px;
+                  position: absolute;
+                  bottom: 100px;
+                  z-index: 1;
+                  left: 22px;
+                  width: auto;
 }

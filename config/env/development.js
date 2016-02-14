@@ -14,7 +14,7 @@ module.exports = {
   },
   hostname: 'http://localhost:3000',
   app: {
-    name: 'MEAN - A Modern Stack - Development'
+    name: 'The Rosh Pit - Dota 2 News Site'
   },
   strategies: {
     local: {

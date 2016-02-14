@@ -29,7 +29,7 @@ module.exports = {
   },
   hostname: 'http://localhost:3000',
   app: {
-    name: 'MThe Rosh Pit - Dota 2 News Site'
+    name: 'The Rosh Pit - Dota 2 News Site'
   },
   logging: {
     format: 'combined'

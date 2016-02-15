@@ -205,6 +205,7 @@ footer p {
 
     .backgroundcolor{
           background: #fff url("http://theroshpit.patrickkillalea.com/system/assets/img/roshbackground.jpg") no-repeat fixed center top;
+          min-height: 600px;
           background-size:cover
     }
 

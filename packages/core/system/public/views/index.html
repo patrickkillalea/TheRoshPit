@@ -85,34 +85,35 @@
       </div>  
     </div>  
     <!-- End Article Pictures Primary -->
-
-
-    <!-- Article Pictures Secondary -->
+    
+    <!-- Videos -->
     <div class="container-fluid">
 
       <div class="header"><h2>Videos</h2></div>
       
-      <!-- Entire Article Block -->
+      <!-- Entire Video Block -->
       <div class="container-inset">
-        <section data-ng-controller="ArticlesController" data-ng-init="find()">
-          <div data-ng-repeat="article in articles | limitTo:4">
+        <section data-ng-controller="VideosController" data-ng-init="find()">
+          <div data-ng-repeat="video in videos | limitTo:4">
             <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
               <div class="">
-                <a data-ng-href="/articles/{{article._id}}">
+                <a data-ng-href="/videos/{{video._id}}">
 
                   <!-- Image Container -->
                   <div id="image-container">
                     <div id="image-aspect"></div>
                     <div id="element">
-                      <img src={{article.image}} class="article-image">
+                      <img src={{video.videourl}} class="article-image">
+                      <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mjyC-oX3am4" frameborder="0" allowfullscreen class="article-image"></iframe> -->
+                      <!-- <iframe width="100%" height="100%" src="{{video.videourl}}" frameborder="0" allowfullscreen class="article-image"></iframe> -->
                     </div>
                   </div>
                   
-                  <!-- Article Title -->
-                  <h3>{{article.title}}</h3> 
+                  <!-- Video Title -->
+                  <h3>{{video.title}}</h3> 
                 </a>
-                <!-- Article Content -->
-                <p class="wrap">{{article.content}}</p>
+                <!-- Video Content -->
+                <p class="wrap">{{video.content}}</p>
               </div>
             </div>
           </div>
@@ -120,14 +121,5 @@
       </div>  
     </div>  
 
-
-<!-- <div id="dummycontainer">
-    <div id="dummy"></div>
-    <div id="element">
-        some text
-    </div>
-</div> -->
-
-
   </div>  
-<!-- End Article Pictures Secondary -->            
+<!-- End Videos -->            

@@ -1,0 +1,66 @@
+<!-- <div class="" data-ng-controller="VideosController">
+  <h1>Example view from your new awesome package</h1>
+  <h2>Package: {{package.name}}</h2>
+  <ol>
+    <li>
+      <a href="/api/videos/example/anyone" target="_self">Server route that anyone can access</a>
+    </li>
+    <li>
+      <a href="/api/videos/example/auth" target="_self">Server route that requires authentication</a>
+    </li>
+    <li>
+      <a href="/api/videos/example/admin" target="_self">Server route that requires admin user</a>
+    </li>
+    <li>
+      <a href="/api/videos/example/render" target="_self">Raw Html rendering example from using swig</a>
+    </li>
+  </ol>
+  <h3><img src="/videos/assets/img/logo.png" /></h3>
+  </br>
+  <p class="alert alert-info">You can find your package in /packages/videos</p>
+  </br>
+  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/videos</p>
+  </br>
+  <h3><a href="http://learn.mean.io">Documentation</a></h3>
+  </br>
+</div> -->
+
+<section data-ng-controller="VideosController" data-ng-init="find()">
+  <ul class=" ">
+    <li data-ng-repeat="video in videos">
+
+      
+<div style="background-color:#081f2c; max-height:105px;overflow:hidden;border-radius:5px;color:white;">
+  
+      <div class="col-md-3 col-sm-3 col-xs-6">
+        <div style="width:auto;height:100px;">
+        <a data-ng-href="/videos/{{video._id}}">
+        <img src="{{video.image}}" style="width: 100%; height: 100%; border-style:groove; border-width:2px; border-color:white; border-radius:20px;">
+        </div>
+      </div>
+
+      <div class="col-md-9 col-sm-9 col-xs-6">
+
+        <span style="font-size:30px;"><a data-ng-href="/videos/{{video._id}}">{{video.title}}</a></span>
+
+        <span style="float:right">{{video.created | date:'medium'}} / {{video.user.name}}</span>
+        
+        <span data-ng-if="hasAuthorization(video)">
+          <a class="btn" href="/videos/{{video._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(video);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+
+
+
+      <div>{{video.content}}</div>
+      </div>
+  </a>
+</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!videos || videos.length">No videos yet. <br> Why don't you <a href="/videos/create">Create One</a>?</h1>
+</section>

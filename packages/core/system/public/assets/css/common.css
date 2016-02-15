@@ -200,7 +200,7 @@ footer p {
       background-image: linear-gradient(to bottom, #070808 0%, #202222 100%);
       background-repeat: repeat-x;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff202222', endColorstr='#ff070808', GradientType=0);
-      min-height: 100px;
+      min-height: 200px;
     }
 
     .backgroundcolor{

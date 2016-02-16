@@ -193,20 +193,16 @@ footer p {
 
     .footer{
       color: #ffffff;
-      background-color: #070808;
-      background-image: -webkit-gradient(linear, left 0%, left 100%, from(#070808), to(#202222));
-      background-image: -webkit-linear-gradient(top, #070808, 0%, #202222, 100%);
-      background-image: -moz-linear-gradient(top, #070808 0%, #202222 100%);
-      background-image: linear-gradient(to bottom, #070808 0%, #202222 100%);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff202222', endColorstr='#ff070808', GradientType=0);
+      background-color: #171919;
       min-height: 200px;
     }
 
     .backgroundcolor{
+          /*background: #fff url("http://theroshpit.patrickkillalea.com/system/assets/img/roshbackground.jpg") no-repeat fixed center top;*/
           background: #fff url("http://theroshpit.patrickkillalea.com/system/assets/img/roshbackground.jpg") no-repeat fixed center top;
-          min-height: 600px;
-          background-size:cover
+          min-height: 500px;
+          background-color: black;
+          /*background-size:cover*/
     }
 
 
@@ -289,15 +285,17 @@ li.nav-links:hover {
 
 .articleText{
     display: block;
-    padding: 20px;
-    margin: 0 30 30px !important;
     font-size: 13px;
-    /*word-break: break-all;*/
-    word-wrap: break-word;
+    word-wrap: break-word !important;
     border-radius: 4px;
     font-family: arial;
     background-color: #161f2c;
     color: white;
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+    line-height: 1.42857143;
+    padding: 9.5px;
+    margin: 0 0 10px;
 }
 
 .welcome p{

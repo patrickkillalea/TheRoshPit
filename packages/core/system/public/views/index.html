@@ -31,17 +31,18 @@
       <!-- End Primary News Carousel -->
 
       <!-- Latest News -->
+
       <section class="container-fluid" data-ng-controller="IndexController">
         <section data-ng-controller="ArticlesController" data-ng-init="find()">
-          <div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="col-md-6 col-sm-12 col-xs-12" style="padding:0; margin:0;">
+            <div class="header"><h2>Top Stories</h2></div>
             <ul class="articles navigation">
               <!-- <a class="nav-links"> -->
               <li class="nav-links" data-ng-repeat="article in articles | limitTo:8">
                 <a data-ng-href="/articles/{{article._id}}">
                   <div>
-                  <span class="article-nav">{{article.title}}</span> -
-                  <span class="article-nav">{{article.user.name}}</span>
-                  <span class="articleDate article-nav">{{article.created | date:'short'}}</span>
+                  <span class="article-nav">{{article.title}}</span> 
+                  <span class="articleDate article-nav hidden-xs">{{article.created | date:'short'}}</span>
                   </div>
                 </a>
               </li>

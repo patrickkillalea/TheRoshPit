@@ -11,10 +11,12 @@ var Videos = new Module('videos');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Videos.register(function(app, auth, database) {
+Videos.register(function(app, auth, database, circles, swagger) {
 
     //We enable routing. By default the Package Object is passed to the routes
     Videos.routes(app, auth, database);
+
+    Videos.aggregateAsset('css', 'videos.css');
 
     //We are adding a link to the main menu for all authenticated users
     Videos.menus.add({
@@ -35,7 +37,7 @@ Videos.register(function(app, auth, database) {
         subtype: 'video'
     });
 
-    Videos.aggregateAsset('css', 'videos.css');
+    
 
     /**
       //Uncomment to use. Requires meanio@0.3.7 or above
@@ -58,7 +60,6 @@ Videos.register(function(app, auth, database) {
           //you now have the settings object
       });
       */
-    // swagger.add(__dirname);
 
     return Videos;
 });

@@ -15,15 +15,13 @@
                     <i class="glyphicon glyphicon-trash"></i>
                 </a>
             </div>
-            <div align="center">
-                <!-- Image Container -->
-                <div id="image-article-container">
-                    <div id="image-aspect"></div>
-                    <div id="article-element">
-                        <img src={{article.image}} class="article-image">
-                    </div>
-                    <div class="article-title hidden-xs">{{article.title}}</div>
+            <!-- Image Container -->
+            <div id="image-article-container">
+                <div id="image-aspect"></div>
+                <div id="article-element">
+                    <img src={{article.image}} class="article-image">
                 </div>
+                <div class="article-title hidden-xs">{{article.title}}</div>
             </div>
             <div style="padding:20px;">
                 <div class="articleText">{{article.content}}</div>
@@ -32,6 +30,6 @@
     </div>
     <div class="col-md-3 hidden-sm hidden-xs" style="margin-top:40px;">
         <div style="height:800px; background-color:#081f2c; border: 1px solid #ccc;"></div>
-        <div>
-            <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
+    </div>
+    <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
 </section>

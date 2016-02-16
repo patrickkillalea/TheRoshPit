@@ -1,8 +1,7 @@
 <div class="navbar navbar-custom navbar-static-top" data-role="navigation" ng-controller="HeaderController as hdrctr">
-    <div class="container">  
-    <div class="page-header">
-        <div class="navbar-header">
-            
+    <div class="container">
+        <div class="page-header">
+            <div class="navbar-header">
                 <div class="logo pull-left">
                     <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
                         <span class="sr-only">Toggle navigation</span>
@@ -13,7 +12,6 @@
                     <a class="navbar-brand" ui-sref="home" mean-token="'site-title'"><img src="http://orig00.deviantart.net/22f2/f/2012/112/8/3/dota_2_icon_v1_1_by_kamizanon-d4x6577.png" style="max-width:85px"></a>
                 </div>
             </div>
-
             <div class="collapse navbar-collapse" ng-class="!isCollapsed && 'in'">
                 <div class="left pull-left">
                     <ul class="navbar-nav nav">
@@ -22,7 +20,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="right pull-right">
                     <div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">
                         <div class="pull-right" mean-token-editable></div>
@@ -48,4 +45,3 @@
         </div>
     </div>
 </div>
-

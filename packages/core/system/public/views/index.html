@@ -1,13 +1,17 @@
 <style>
 /*Article Image Style*/
+
 #image-container {
     display: inline-block;
     position: relative;
     width: 100%;
 }
+
 #image-aspect {
-    margin-top: 60%; /* 4:3 aspect ratio */
+    margin-top: 60%;
+    /* 4:3 aspect ratio */
 }
+
 #element {
     position: absolute;
     top: 0;
@@ -16,111 +20,99 @@
     right: 0;
 }
 </style>
-
-  <div class="container">    
-
+<div class="container mobile-padding">
     <!-- Main News Section -->
     <div class="welcome container-fluid ">
-      <!-- Primary News Carousel -->
-      <div class="col-md-6 col-sm-12 col-xs-12 container-fluid container-inset">
-        <div class="featuredpic">
-          <img src="https://assets.vg247.com/current//2014/08/dota-2-official.jpg">
+        <!-- Primary News Carousel -->
+        <div class="col-md-6 col-sm-12 col-xs-12 container-fluid container-inset">
+            <div class="featuredpic">
+                <img src="https://assets.vg247.com/current//2014/08/dota-2-official.jpg">
+            </div>
+            <p>A month has passed since the release of patch 6.86 and some teams have already decided on their style of play, while some are still experimenting. Starladder|i-League featured the finest teams of the moment and looking at their entire journey in Minsk</p>
         </div>
-        <p>A month has passed since the release of patch 6.86 and some teams have already decided on their style of play, while some are still experimenting. Starladder|i-League featured the finest teams of the moment and looking at their entire journey in Minsk</p>
-      </div>
-      <!-- End Primary News Carousel -->
-
-      <!-- Latest News -->
-
-      <section class="container-fluid" data-ng-controller="IndexController">
-        <section data-ng-controller="ArticlesController" data-ng-init="find()">
-          <div class="col-md-6 col-sm-12 col-xs-12" style="padding:0; margin:0;">
-            <div class="header"><h2>Top Stories</h2></div>
-            <ul class="articles navigation">
-              <!-- <a class="nav-links"> -->
-              <li class="nav-links" data-ng-repeat="article in articles | limitTo:8">
-                <a data-ng-href="/articles/{{article._id}}">
-                  <div>
-                  <span class="article-nav">{{article.title}}</span> 
-                  <span class="articleDate article-nav hidden-xs">{{article.created | date:'short'}}</span>
-                  </div>
-                </a>
-              </li>
-              <!-- </a> -->
-            </ul>
-          </div> 
+        <!-- End Primary News Carousel -->
+        <!-- Latest News -->
+        <section class="container-fluid" data-ng-controller="IndexController">
+            <section data-ng-controller="ArticlesController" data-ng-init="find()">
+                <div class="col-md-6 col-sm-12 col-xs-12" style="padding:0; margin:0;">
+                    <div class="header">
+                        <h2>Top Stories</h2></div>
+                    <ul class="articles navigation">
+                        <!-- <a class="nav-links"> -->
+                        <li class="nav-links" data-ng-repeat="article in articles | limitTo:8">
+                            <a data-ng-href="/articles/{{article._id}}">
+                                <div>
+                                    <span class="article-nav">{{article.title}}</span>
+                                    <span class="articleDate article-nav hidden-xs">{{article.created | date:'short'}}</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- </a> -->
+                    </ul>
+                </div>
+            </section>
         </section>
-      </section>
     </div>
-
     <!-- Article Pictures Primary -->
     <div class="container-fluid">
-
-      <div class="header"><h2>Headlines</h2></div>
-
-      <!-- Entire Article Block -->
-      <div class="container-inset">
-        <section data-ng-controller="ArticlesController" data-ng-init="find()">
-          <div data-ng-repeat="article in articles | limitTo:4">
-            <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
-              <div class="">
-                <a data-ng-href="/articles/{{article._id}}">
-
-                  <!-- Image Container -->
-                  <div id="image-container">
-                    <div id="image-aspect"></div>
-                    <div id="element">
-                      <img src={{article.image}} class="article-image">
+        <div class="header">
+            <h2>Headlines</h2></div>
+        <!-- Entire Article Block -->
+        <div class="container-inset">
+            <section data-ng-controller="ArticlesController" data-ng-init="find()">
+                <div data-ng-repeat="article in articles | limitTo:4">
+                    <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
+                        <div class="">
+                            <a data-ng-href="/articles/{{article._id}}">
+                                <!-- Image Container -->
+                                <div id="image-container">
+                                    <div id="image-aspect"></div>
+                                    <div id="element">
+                                        <img src={{article.image}} class="article-image">
+                                    </div>
+                                </div>
+                                <!-- Article Title -->
+                                <h3>{{article.title}}</h3>
+                            </a>
+                            <!-- Article Content -->
+                            <p class="wrap">{{article.content}}</p>
+                        </div>
                     </div>
-                  </div>
-                  
-                  <!-- Article Title -->
-                  <h3>{{article.title}}</h3> 
-                </a>
-                <!-- Article Content -->
-                <p class="wrap">{{article.content}}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>  
-    </div>  
+                </div>
+            </section>
+        </div>
+    </div>
     <!-- End Article Pictures Primary -->
-    
     <!-- Videos -->
     <div class="container-fluid">
-
-      <div class="header"><h2>Videos</h2></div>
-      
-      <!-- Entire Video Block -->
-      <div class="container-inset">
-        <section data-ng-controller="VideosController" data-ng-init="find()">
-          <div data-ng-repeat="video in videos | limitTo:4">
-            <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
-              <div class="">
-                <a data-ng-href="/videos/{{video._id}}">
-
-                  <!-- Image Container -->
-                  <div id="image-container">
-                    <div id="image-aspect"></div>
-                    <div id="element">
-                      <img src={{video.videourl}} class="article-image">
-                      <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mjyC-oX3am4" frameborder="0" allowfullscreen class="article-image"></iframe> -->
-                      <!-- <iframe width="100%" height="100%" src="{{video.videourl}}" frameborder="0" allowfullscreen class="article-image"></iframe> -->
+        <div class="header">
+            <h2>Videos</h2></div>
+        <!-- Entire Video Block -->
+        <div class="container-inset">
+            <section data-ng-controller="VideosController" data-ng-init="find()">
+                <div data-ng-repeat="video in videos | limitTo:4">
+                    <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:20px;">
+                        <div class="">
+                            <a data-ng-href="/videos/{{video._id}}">
+                                <!-- Image Container -->
+                                <div id="image-container">
+                                    <div id="image-aspect"></div>
+                                    <div id="element">
+                                        <img src={{video.videourl}} class="article-image">
+                                        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mjyC-oX3am4" frameborder="0" allowfullscreen class="article-image"></iframe> -->
+                                        <!-- <iframe width="100%" height="100%" src="{{video.videourl}}" frameborder="0" allowfullscreen class="article-image"></iframe> -->
+                                    </div>
+                                </div>
+                                <!-- Video Title -->
+                                <h3>{{video.title}}</h3>
+                            </a>
+                            <!-- Video Content -->
+                            <p class="wrap">{{video.content}}</p>
+                        </div>
                     </div>
-                  </div>
-                  
-                  <!-- Video Title -->
-                  <h3>{{video.title}}</h3> 
-                </a>
-                <!-- Video Content -->
-                <p class="wrap">{{video.content}}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>  
-    </div>  
-
-  </div>  
-<!-- End Videos -->            
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- End Videos -->

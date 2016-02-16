@@ -1,37 +1,37 @@
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-   <div class="col-md-9 col-sm-12 col-xs-12">
-      <div style="">
-         <div class="articleDate">
-            <span style="color:white;">{{article.created | date:'medium'}} / {{article.user.name}}</span>
-         </div>
-         <div class="visible-xs"style="color:white;"><h3>{{article.title}}</h3></div>
-         </br>
-         <div data-ng-if="hasAuthorization(article)">
-            <a class="btn" href="/articles/{{article._id}}/edit">
-            <i class="glyphicon glyphicon-edit"></i>
-            </a>
-            <a class="btn" data-ng-click="remove(article);">
-            <i class="glyphicon glyphicon-trash"></i>
-            </a>
-         </div>
-         <div align="center">
-            <!-- Image Container -->
-            <div id="image-article-container">
-               <div id="image-aspect"></div>
-               <div id="article-element">
-                  <img src={{article.image}} class="article-image">
-               </div>
-               <div class="article-title hidden-xs">{{article.title}}</div>
+    <div class="col-md-9 col-sm-12 col-xs-12">
+        <div style="">
+            <div class="articleDate">
+                <span style="color:white;">{{article.created | date:'medium'}} / {{article.user.name}}</span>
             </div>
-         </div>
-
-         <div style="padding:20px;">
-            <div class="articleText">{{article.content}}</div>
-         </div>
-      </div>
-   </div>
-   <div class="col-md-3 hidden-sm hidden-xs" style="margin-top:40px;">
-   <div style="height:800px; background-color:#081f2c; border: 1px solid #ccc;"></div>
-   <div>
-   <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
+            <div class="visible-xs" style="color:white;">
+                <h3>{{article.title}}</h3></div>
+            </br>
+            <div data-ng-if="hasAuthorization(article)">
+                <a class="btn" href="/articles/{{article._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn" data-ng-click="remove(article);">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
+            <div align="center">
+                <!-- Image Container -->
+                <div id="image-article-container">
+                    <div id="image-aspect"></div>
+                    <div id="article-element">
+                        <img src={{article.image}} class="article-image">
+                    </div>
+                    <div class="article-title hidden-xs">{{article.title}}</div>
+                </div>
+            </div>
+            <div style="padding:20px;">
+                <div class="articleText">{{article.content}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 hidden-sm hidden-xs" style="margin-top:40px;">
+        <div style="height:800px; background-color:#081f2c; border: 1px solid #ccc;"></div>
+        <div>
+            <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
 </section>

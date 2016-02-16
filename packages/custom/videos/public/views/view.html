@@ -1,35 +1,35 @@
 <section data-ng-controller="VideosController" data-ng-init="findOne()">
-   <div class="col-md-9 col-sm-12 col-xs-12">
-      <div style="background-color:#081f2c;">
-         <div class="articleDate">
-            <span style="color:white;">{{video.created | date:'medium'}} / {{video.user.name}}</span>
-         </div>
-         <div class="visible-xs"style="color:white;"><h3>{{video.title}}</h3></div>
-         </br>
-         <div data-ng-if="hasAuthorization(video)">
-            <a class="btn" href="/videos/{{video._id}}/edit">
-            <i class="glyphicon glyphicon-edit"></i>
-            </a>
-            <a class="btn" data-ng-click="remove(video);">
-            <i class="glyphicon glyphicon-trash"></i>
-            </a>
-         </div>
-         <div align="center">
-            <!-- Image Container -->
-            <div id="image-video-container">
-               <div id="image-aspect"></div>
-               <div id="article-element">
-                  <img src={{video.videourl}} class="article-image">
-               </div>
-               <div class="article-title hidden-xs">{{video.title}}</div>
+    <div class="col-md-9 col-sm-12 col-xs-12">
+        <div style="background-color:#081f2c;">
+            <div class="articleDate">
+                <span style="color:white;">{{video.created | date:'medium'}} / {{video.user.name}}</span>
             </div>
-         </div>
-
-         <pre class="articleText">{{video.content}}</pre>
-      </div>
-   </div>
-   <div class="col-md-3 hidden-sm hidden-xs">
-   <div style="height:600px; background-color:#081f2c"></div>
-   <div>
-   <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
+            <div class="visible-xs" style="color:white;">
+                <h3>{{video.title}}</h3></div>
+            </br>
+            <div data-ng-if="hasAuthorization(video)">
+                <a class="btn" href="/videos/{{video._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn" data-ng-click="remove(video);">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
+            <div align="center">
+                <!-- Image Container -->
+                <div id="image-video-container">
+                    <div id="image-aspect"></div>
+                    <div id="article-element">
+                        <img src={{video.videourl}} class="article-image">
+                    </div>
+                    <div class="article-title hidden-xs">{{video.title}}</div>
+                </div>
+            </div>
+            <pre class="articleText">{{video.content}}</pre>
+        </div>
+    </div>
+    <div class="col-md-3 hidden-sm hidden-xs">
+        <div style="height:600px; background-color:#081f2c"></div>
+        <div>
+            <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
 </section>

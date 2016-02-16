@@ -7,10 +7,10 @@ module.exports = function(System, app, auth, database) {
     app.route('/api/admin/menu/:name')
         .get(function(req, res) {
             var roles = req.user ? JSON.parse(JSON.stringify(req.acl.user.allowed)) : ['anonymous'],
-            menu = req.params.name || 'main',
-            defaultMenu = req.query.defaultMenu || [],
-            itemsRes = [],
-            tmpMenu;
+                menu = req.params.name || 'main',
+                defaultMenu = req.query.defaultMenu || [],
+                itemsRes = [],
+                tmpMenu;
 
             if (menu === 'main' && roles.indexOf('admin') !== -1) {
                 roles.splice(roles.indexOf('admin'), 1);

@@ -2,11 +2,14 @@ html {
     height: 100%;
 }
 
-body.login, body.register,  body.forgot-password {
-background: url("/theme/assets/img/bg.png");
+body.login,
+body.register,
+body.forgot-password {
+    background: url("/theme/assets/img/bg.png");
     height: 100%;
     position: relative;
 }
+
 @font-face {
     font-family: 'futura_bkbook';
     src: url("/theme/assets/fonts/ufonts.com_futura-book.eot");
@@ -46,18 +49,26 @@ background: url("/theme/assets/img/bg.png");
     font-weight: normal;
     font-style: normal;
 }
+
 .form {
     background: #ffffff;
     box-shadow: 0 1px 3px 1px #003644;
     margin-top: 35px;
     left: 50%;
-    position: relative;
+    position: inherit;
 }
 
 .main-form {
-    width: 748px;
+    width: auto;
     height: 435px;
-    margin-left: -374px;
+}
+
+@media (min-width: 991px) {
+    .main-form {
+        width: 80%;
+        float: center;
+        margin: auto;
+    }
 }
 
 .main-form.register-form {
@@ -65,13 +76,14 @@ background: url("/theme/assets/img/bg.png");
 }
 
 .login-form__left {
-    width: 440px;
+    width: auto;
     height: 100%;
-    float: left;
+    float: center;
     padding: 34px 0 0 27px;
 }
 
-.login-form__left h2, .forgot_password_form h2 {
+.login-form__left h2,
+.forgot_password_form h2 {
     font-size: 30px;
     padding-bottom: 4px;
     font-family: "futura_bkbook";
@@ -79,7 +91,8 @@ background: url("/theme/assets/img/bg.png");
     text-transform: uppercase;
 }
 
-.login-form__left p, .forgot_password_form p {
+.login-form__left p,
+.forgot_password_form p {
     font-size: 16px;
     font-family: 'proxima_nova_rgregular';
 }
@@ -90,7 +103,7 @@ background: url("/theme/assets/img/bg.png");
 }
 
 .main-form .input-wrapper input {
-    width: 401px;
+    width: 100%;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
     padding: 18px 0 18px 16px;
@@ -107,8 +120,8 @@ background: url("/theme/assets/img/bg.png");
 .main-form .input-wrapper input:focus {
     border-color: #66afe9;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 .pic.email {
@@ -295,13 +308,14 @@ background: url("/theme/assets/img/bg.png");
     width: 270px;
     padding-left: 26px;
 }
+
 .login-form__right .social_wrap {
     width: 235px;
     height: 270px;
     margin-top: 36px;
     padding-left: 0;
     display: block;
-    position:relative;
+    position: relative;
 }
 
 .register-form .login-form__right .social_wrap {
@@ -315,8 +329,10 @@ background: url("/theme/assets/img/bg.png");
 
 .login-form__right .bigger .social {
     top: inherit;
-    -ms-transform: none; /* IE 9 */
-    -webkit-transform: none; /* Chrome, Safari, Opera */
+    -ms-transform: none;
+    /* IE 9 */
+    -webkit-transform: none;
+    /* Chrome, Safari, Opera */
     transform: none;
 }
 
@@ -324,13 +340,15 @@ background: url("/theme/assets/img/bg.png");
     margin: 0;
     padding-left: 0;
     display: block;
-    list-style:none;
-    position:absolute;
-    top:50%;
-    left:0;
-    right:0;
-    -ms-transform: translate(0, -50%); /* IE 9 */
-    -webkit-transform: translate(0, -50%); /* Chrome, Safari, Opera */
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -ms-transform: translate(0, -50%);
+    /* IE 9 */
+    -webkit-transform: translate(0, -50%);
+    /* Chrome, Safari, Opera */
     transform: translate(0, -50%);
 }
 

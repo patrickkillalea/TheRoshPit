@@ -1,17 +1,17 @@
-<section data-ng-controller="VideosController" data-ng-init="findOne()">
+<section data-ng-controller="FixturesController" data-ng-init="findOne()">
     <div class="col-md-9 col-sm-12 col-xs-12" style="color:white;">
         <div class="articleDate">
-            <span>{{video.created | date:'medium'}} / {{video.user.name}}</span>
+            <span>{{fixture.created | date:'medium'}} / {{fixture.user.name}}</span>
         </div>
         <div class="visible-xs">
-            <h3>{{video.title}}</h3>
+            <h3>{{fixture.team1}} vs {{fixture.team2}}</h3>
         </div>
         </br>
-        <div data-ng-if="hasAuthorization(video)">
-            <a class="btn" href="/videos/{{video._id}}/edit">
+        <div data-ng-if="hasAuthorization(fixture)">
+            <a class="btn" href="/fixtures/{{fixture._id}}/edit">
                 <i class="glyphicon glyphicon-edit"></i>
             </a>
-            <a class="btn" data-ng-click="remove(video);">
+            <a class="btn" data-ng-click="remove(fixture);">
                 <i class="glyphicon glyphicon-trash"></i>
             </a>
         </div>
@@ -19,12 +19,15 @@
         <div id="image-article-container">
             <div id="image-aspect"></div>
             <div id="article-element">
-                <img src={{video.videourl}} class="article-image">
+                <img src={{fixture.image}} class="article-image">
             </div>
-            <div class="article-title hidden-xs">{{video.title}}</div>
+            <div class="article-title hidden-xs">{{fixture.team1}} vs {{fixture.team2}}</div>
         </div>
         <div style="padding:20px;">
-            <div class="articleText">{{video.content}}</div>
+            <div class="articleText">{{fixture.competition}}</div>
+        </div>
+        <div style="padding:20px;">
+            <div class="articleText">{{fixture.content}}</div>
         </div>
     </div>
 </section>

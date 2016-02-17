@@ -1,25 +1,3 @@
-// (function () {
-//   'use strict';
-
-//   /* jshint -W098 */
-//   angular
-//     .module('mean.videos')
-//     .controller('VideosController', VideosController);
-
-//   VideosController.$inject = ['$scope', 'Global', 'Videos'];
-
-//   function VideosController($scope, Global, Videos) {
-//     $scope.global = Global;
-//     $scope.package = {
-//       name: 'videos'
-//     };
-//   }
-// })();
-
-
-
-
-
 'use strict';
 
 angular.module('mean.videos').controller('VideosController', ['$scope', '$stateParams', '$location', 'Global', 'Videos', 'MeanUser', 'Circles',

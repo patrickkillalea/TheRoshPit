@@ -1,23 +1,3 @@
-// (function () {
-//   'use strict';
-
-//   angular
-//     .module('mean.videos')
-//     .config(videos);
-
-//   videos.$inject = ['$stateProvider'];
-
-//   function videos($stateProvider) {
-//     $stateProvider.state('videos example page', {
-//       url: '/videos/example',
-//       templateUrl: 'videos/views/index.html'
-//     });
-//   }
-
-// })();
-
-// Article route
-
 'use strict';
 
 //Setting up route

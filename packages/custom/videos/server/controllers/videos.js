@@ -108,9 +108,6 @@ module.exports = function(Videos) {
 
             Videos.events.publish({
                 action: 'viewed',
-                // user: {
-                //     name: req.user.name
-                // },
                 name: req.video.title,
                 url: config.hostname + '/videos/' + req.video._id
             });

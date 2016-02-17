@@ -1,0 +1,74 @@
+<section data-ng-controller="FixturesController">
+    <div class="col-md-12 col-sm-12 col-xs-12 form-style">
+        <h2>Add a Fixture</h2>
+        <form name="fixtureForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(fixtureForm.$valid)" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : submitted && fixtureForm.competition.$invalid }">
+                <label mean-token="'create-competition'" class="col-md-3 control-label">Competition</label>
+                <div class="col-md-9">
+                    <input name="competition" type="text" class="form-control" data-ng-model="fixture.competition" id="competition" required>
+                    <div ng-show="submitted && fixtureForm.competition.$invalid" class="help-block">
+                        <p ng-show="fixtureForm.competition.$error.required">Competition is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : submitted && fixtureForm.image.$invalid }">
+                <label mean-token="'create-image'" for="image" class="col-md-3 control-label">Image URL</label>
+                <div class="col-md-9">
+                    <input name="image" data-ng-model="fixture.image" id="image" cols="30" rows="10" class="form-control" required></input>
+                    <div ng-show="submitted && fixtureForm.image.$invalid" class="help-block">
+                        <p ng-show="fixtureForm.image.$error.required">Image is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : submitted && fixtureForm.team1.$invalid }">
+                <label mean-token="'create-team1'" for="team1" class="col-md-3 control-label">Team 1</label>
+                <div class="col-md-9">
+                    <textarea name="team1" data-ng-model="fixture.team1" id="team1" cols="30" rows="10" class="form-control" required></textarea>
+                    <div ng-show="submitted && fixtureForm.team1.$invalid" class="help-block">
+                        <p ng-show="fixtureForm.team1.$error.required">Content is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : submitted && fixtureForm.team2.$invalid }">
+                <label mean-token="'create-team2'" for="team2" class="col-md-3 control-label">Team 2</label>
+                <div class="col-md-9">
+                    <textarea name="team2" data-ng-model="fixture.team2" id="team2" cols="30" rows="10" class="form-control" required></textarea>
+                    <div ng-show="submitted && fixtureForm.team2.$invalid" class="help-block">
+                        <p ng-show="fixtureForm.team2.$error.required">Content is required</p>
+                    </div>
+                </div>
+            </div>                        
+            <div class="form-group" ng-class="{ 'has-error' : submitted && fixtureForm.content.$invalid }">
+                <label mean-token="'create-content'" for="content" class="col-md-3 control-label">Content</label>
+                <div class="col-md-9">
+                    <textarea name="content" data-ng-model="fixture.content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                    <div ng-show="submitted && fixtureForm.content.$invalid" class="help-block">
+                        <p ng-show="fixtureForm.content.$error.required">Content is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label mean-token="'permissions'" for="permissions" class="col-md-3 control-label">Permissions</label>
+                <div class="col-md-9">
+                    <ui-select multiple ng-model="fixture.permissions" append-to-body="'true'" on-select="selectPermission()">
+                        <ui-select-match placeholder="Select permissions..." ng-click="showDescendants();">{{$item}}</ui-select-match>
+                        <ui-select-choices repeat="circle in availableCircles | filter:$select.search" name="permissions">
+                            {{circle}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <div class="form-group" ng-show="descendants.length">
+                <label mean-token="'descendants'" for="descendants" class="col-md-3 control-label">Descendants</label>
+                <div class="col-md-9">
+                    <span ng-repeat="descendant in descendants">{{descendant}} <span ng-hide="$last">, </span></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <button mean-token="'create-submit'" type="submit" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -450,9 +450,62 @@ p.wrap {
     overflow: hidden;
     border-radius: 5px;
     color: white;
+    margin-bottom: 20px;
 }
 
 .list-container-inset {
     width: auto;
     height: 100px;
+}
+
+.fixtures-block {
+    width: 100%;
+    height: 800px;
+    background-color: #081f2c;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+}
+
+.fixtures-pill {
+    background-color: #005200;
+    margin: 5px;
+    border-radius: 30px;
+    border: 1px;
+    border-style: solid;
+    font-size: 10px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.fixtures-pill-left {
+    position: relative;
+    left: 10px;
+    color: white;
+}
+
+.fixtures-pill-center {
+    position: absolute;
+    left: 45%;
+    color: white;
+}
+
+.fixtures-pill-right {
+    position: absolute;
+    right: 30px;
+    color: white;
+}
+
+@media (min-width: 600px) {
+    .fixture-list-competition {
+        font-size: 20px;
+    }
+}
+
+ul {
+    padding: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+    list-style-type: none;
 }

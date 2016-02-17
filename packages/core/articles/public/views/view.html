@@ -28,8 +28,25 @@
             </div>
         </div>
     </div>
+</section>
+<section data-ng-controller="FixturesController" data-ng-init="find()">
     <div class="col-md-3 hidden-sm hidden-xs" style="margin-top:40px;">
-        <div style="height:800px; background-color:#081f2c; border: 1px solid #ccc;border-radius: 10px;"></div>
+        <div class="fixtures-block">
+            <div align="center">
+                <h4>Fixtures</h4>
+            </div>
+            <div data-ng-repeat="fixture in fixtures | limitTo:10">
+                <a data-ng-href="/fixtures/{{fixture._id}}" style="width:100%">
+                    <div class="fixtures-pill">
+                        <span class="fixtures-pill-left">{{fixture.created | date:'short'}}</span>
+                        <span class="fixtures-pill-right">{{fixture.competition}}</span>
+                        </br>
+                        <span class="fixtures-pill-left">{{fixture.team1}}</span>
+                        <span class="fixtures-pill-center">VS</span>
+                        <span class="fixtures-pill-right">{{fixture.team2}}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->
 </section>

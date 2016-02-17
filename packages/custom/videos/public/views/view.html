@@ -1,9 +1,9 @@
 <section data-ng-controller="VideosController" data-ng-init="findOne()">
-    <div class="col-md-9 col-sm-12 col-xs-12">
+    <div class="col-md-9 col-sm-12 col-xs-12"style="color:white;">
         <div class="articleDate">
-            <span style="color:white;">{{video.created | date:'medium'}} / {{video.user.name}}</span>
+            <span>{{video.created | date:'medium'}} / {{video.user.name}}</span>
         </div>
-        <div class="visible-xs" style="color:white;">
+        <div class="visible-xs">
             <h3>{{video.title}}</h3>
         </div>
         </br>
@@ -29,7 +29,7 @@
     </div>
     <div class="col-md-3 hidden-sm hidden-xs" style="margin-top:40px;">
         <div style="height:800px; background-color:#081f2c; border: 1px solid #ccc;border-radius: 10px;color:white;">
-            Team 1  VS  Team 2
+            Team 1 VS Team 2
         </div>
     </div>
     <!-- <div data-ng-bind-html-unsafe class="articleText">{{article.content}}</div> -->

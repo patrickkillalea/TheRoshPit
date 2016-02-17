@@ -1,24 +1,16 @@
 <section data-ng-controller="VideosController" data-ng-init="find()">
     <ul class=" ">
         <li data-ng-repeat="video in videos">
-            <div style="background-color:#081f2c; max-height:105px;overflow:hidden;border-radius:5px;color:white;">
+            <div class="list-container">
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div style="width:auto;height:100px;">
+                    <div class="list-container-inset">
                         <a data-ng-href="/videos/{{video._id}}">
-                            <img src="{{video.videourl}}" style="width: 100%; height: 100%; border-style:groove; border-width:2px; border-color:white; border-radius:20px;">
+                            <img src="{{video.videourl}}" class="list-image">
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-6">
                     <span style="font-size:30px;"><a data-ng-href="/videos/{{video._id}}">{{video.title}}</a></span>
-                    <span style="float:right">{{video.created | date:'medium'}} / {{video.user.name}}</span>
-                    <span data-ng-if="hasAuthorization(video)">
-          <a class="btn" href="/videos/{{video._id}}/edit">
-            <i class="glyphicon glyphicon-edit"></i>
-          </a>
-          <a class="btn" data-ng-click="remove(video);">
-            <i class="glyphicon glyphicon-trash"></i>
-          </a>
-        </span>
+                    <span class="hidden-xs" style="float:right">{{video.created | date:'medium'}} / {{video.user.name}}</span>
                     <div>{{video.content}}</div>
                 </div>
                 </a>
